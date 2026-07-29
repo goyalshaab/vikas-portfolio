@@ -1,0 +1,1374 @@
+/*====================================================
+            VIKAS GOYAL PORTFOLIO CSS
+                PART 3A
+=====================================================*/
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+/* Root Colors */
+
+:root{
+
+    --primary:#0d6efd;
+    --secondary:#6610f2;
+    --dark:#212529;
+    --light:#ffffff;
+    --text:#555555;
+    --bg:#f8f9fa;
+    --shadow:0 15px 35px rgba(0,0,0,.08);
+    --radius:18px;
+    --transition:.4s ease;
+
+}
+
+/* Body */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--light);
+    color:var(--dark);
+    overflow-x:hidden;
+    line-height:1.7;
+
+}
+
+/* Images */
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+/* Links */
+
+a{
+
+    text-decoration:none;
+    transition:var(--transition);
+
+}
+
+/* Section */
+
+section{
+
+    padding:100px 0;
+
+}
+
+/* Heading */
+
+h1,h2,h3,h4,h5,h6{
+
+    font-weight:700;
+
+}
+
+p{
+
+    color:var(--text);
+
+}
+
+/* Container */
+
+.container{
+
+    max-width:1200px;
+
+}
+
+/*====================================================
+                    NAVBAR
+=====================================================*/
+
+.navbar{
+
+    background:#ffffff!important;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+    padding:18px 0;
+    transition:.4s;
+
+}
+
+.navbar-brand{
+
+    font-size:32px;
+    font-weight:800;
+    color:var(--primary)!important;
+
+}
+
+.navbar-nav .nav-link{
+
+    color:#222!important;
+    font-weight:600;
+    margin-left:18px;
+    position:relative;
+
+}
+
+.navbar-nav .nav-link::after{
+
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:3px;
+    background:var(--primary);
+    transition:.3s;
+
+}
+
+.navbar-nav .nav-link:hover::after{
+
+    width:100%;
+
+}
+
+.navbar-nav .nav-link:hover{
+
+    color:var(--primary)!important;
+
+}
+
+/*====================================================
+                HERO SECTION
+=====================================================*/
+
+#home{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+    linear-gradient(135deg,#eef6ff,#ffffff);
+
+}
+
+/* Name */
+
+#home h1{
+
+    font-size:68px;
+    font-weight:800;
+    color:#111;
+
+}
+
+/* Profession */
+
+#home h3{
+
+    color:var(--primary);
+    font-weight:700;
+
+}
+
+/* Paragraph */
+
+#home p{
+
+    font-size:18px;
+    margin-top:20px;
+    margin-bottom:30px;
+
+}
+
+/* Buttons */
+
+.btn{
+
+    border-radius:40px;
+    padding:14px 34px;
+    font-weight:600;
+    transition:.4s;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 25px rgba(13,110,253,.35);
+
+}
+
+.btn-outline-dark:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* Hero Image */
+
+#home img{
+
+    width:430px;
+    height:430px;
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.15);
+
+    transition:.5s;
+
+}
+
+#home img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* Social Icons */
+
+#home .fa-brands{
+
+    transition:.3s;
+
+}
+
+#home a i:hover{
+
+    color:var(--primary)!important;
+
+    transform:translateY(-8px);
+
+}
+
+/*====================================================
+                SECTION TITLES
+=====================================================*/
+
+section h6{
+
+    letter-spacing:2px;
+    color:var(--primary);
+    font-weight:700;
+
+}
+
+section h2{
+
+    font-size:42px;
+    margin-bottom:20px;
+
+}
+
+/*====================================================
+                    ABOUT
+=====================================================*/
+
+#about{
+
+    background:#f8fafc;
+
+}
+
+#about img{
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+#about p{
+
+    font-size:17px;
+
+}
+
+#about strong{
+
+    color:#111;
+
+}
+
+#about .btn{
+
+    margin-top:20px;
+
+}
+
+/*====================================================
+            SIMPLE ANIMATIONS
+=====================================================*/
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+#home img{
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+.fade-up{
+
+    animation:fadeup 1s;
+
+}
+
+@keyframes fadeup{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*====================================================
+                SCROLLBAR
+=====================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#0a58ca;
+
+}
+/*====================================================
+                SKILLS SECTION
+=====================================================*/
+
+#skills{
+    background:#ffffff;
+}
+
+#skills .progress{
+    height:12px;
+    border-radius:30px;
+    background:#e9ecef;
+    overflow:hidden;
+    margin-bottom:25px;
+}
+
+#skills .progress-bar{
+    border-radius:30px;
+    font-size:12px;
+    font-weight:600;
+    line-height:12px;
+    transition:width 2s ease;
+}
+
+#skills h6{
+    font-weight:600;
+    margin-bottom:8px;
+    color:#222;
+}
+
+#skills .container{
+    position:relative;
+}
+
+#skills .row{
+    row-gap:25px;
+}
+
+/*====================================================
+                SERVICES SECTION
+=====================================================*/
+
+#services{
+    background:#f8f9fa;
+}
+
+#services .card{
+
+    border:none;
+    border-radius:20px;
+    transition:.4s;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+#services .card:hover{
+
+    transform:translateY(-15px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+#services i{
+
+    transition:.4s;
+
+}
+
+#services .card:hover i{
+
+    transform:rotate(10deg) scale(1.2);
+
+}
+
+#services h4{
+
+    margin-top:15px;
+    font-weight:700;
+
+}
+
+#services p{
+
+    font-size:15px;
+    color:#666;
+
+}
+
+/*====================================================
+                COMMON CARD STYLE
+=====================================================*/
+
+.card{
+
+    border-radius:20px;
+
+}
+
+.card img{
+
+    transition:.5s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*====================================================
+                ICON CIRCLE
+=====================================================*/
+
+.icon-box{
+
+    width:90px;
+    height:90px;
+    background:#0d6efd;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px;
+    margin:auto;
+    transition:.4s;
+
+}
+
+.icon-box:hover{
+
+    transform:rotate(360deg);
+
+}
+
+/*====================================================
+            SERVICE BUTTON
+=====================================================*/
+
+.service-btn{
+
+    border-radius:50px;
+    padding:12px 30px;
+    transition:.4s;
+
+}
+
+.service-btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/*====================================================
+                SECTION TITLE
+=====================================================*/
+
+.title{
+
+    text-align:center;
+    margin-bottom:60px;
+
+}
+
+.title h2{
+
+    font-size:42px;
+    font-weight:700;
+
+}
+
+.title p{
+
+    color:#666;
+    max-width:650px;
+    margin:auto;
+
+}
+
+/*====================================================
+            HOVER ANIMATION
+=====================================================*/
+
+.zoom{
+
+    transition:.4s;
+
+}
+
+.zoom:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*====================================================
+                BOX SHADOW
+=====================================================*/
+
+.shadow-hover{
+
+    transition:.4s;
+
+}
+
+.shadow-hover:hover{
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+/*====================================================
+                RESPONSIVE
+=====================================================*/
+
+@media(max-width:991px){
+
+#skills{
+
+text-align:left;
+
+}
+
+#services .card{
+
+margin-bottom:30px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.title h2{
+
+font-size:34px;
+
+}
+
+#services h4{
+
+font-size:22px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+#skills h6{
+
+font-size:15px;
+
+}
+
+.progress{
+
+height:10px;
+
+}
+
+#services .card{
+
+padding:25px 15px;
+
+}
+
+}
+/*====================================================
+                PROJECTS SECTION
+=====================================================*/
+
+#projects{
+    background:#ffffff;
+}
+
+#projects .card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+#projects .card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 45px rgba(0,0,0,.18);
+}
+
+#projects .card img{
+    height:240px;
+    object-fit:cover;
+    transition:.5s;
+    aspect-ratio: 1/1;
+}
+
+#projects .card:hover img{
+    transform:scale(1.08);
+}
+
+#projects h4{
+    font-size:24px;
+    font-weight:700;
+}
+
+#projects p{
+    color:#666;
+}
+
+#projects .btn{
+    border-radius:50px;
+}
+
+/*====================================================
+                COUNTER SECTION
+=====================================================*/
+
+.counter-section{
+
+    background:linear-gradient(135deg,#0d6efd,#6610f2);
+
+    color:#fff;
+
+}
+
+.counter-section h1{
+
+    font-size:55px;
+    font-weight:800;
+
+}
+
+.counter-section p{
+
+    color:#fff;
+    font-size:18px;
+
+}
+
+/*====================================================
+                CONTACT SECTION
+=====================================================*/
+
+#contact{
+
+    background:#f8f9fa;
+
+}
+
+#contact h4{
+
+    font-weight:700;
+
+}
+
+#contact form{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+#contact input,
+#contact textarea{
+
+    border-radius:12px;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    transition:.3s;
+
+}
+
+#contact input:focus,
+#contact textarea:focus{
+
+    border-color:#0d6efd;
+
+    box-shadow:0 0 0 .2rem rgba(13,110,253,.15);
+
+}
+
+#contact button{
+
+    border-radius:50px;
+
+    padding:14px;
+
+}
+
+#contact i{
+
+    width:35px;
+
+    color:#0d6efd;
+
+}
+
+/*====================================================
+                FOOTER
+=====================================================*/
+
+footer{
+
+    background:#111;
+
+    color:#fff;
+
+    padding:40px 0;
+
+}
+
+footer p{
+
+    color:#ddd;
+
+    margin-bottom:0;
+
+}
+
+footer a{
+
+    color:#fff;
+
+    margin:0 10px;
+
+    font-size:22px;
+
+    transition:.3s;
+
+}
+
+footer a:hover{
+
+    color:#0d6efd;
+
+    transform:translateY(-5px);
+
+}
+
+/*====================================================
+            BUTTON HOVER EFFECT
+=====================================================*/
+
+.btn{
+
+    transition:.35s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/*====================================================
+                IMAGE EFFECT
+=====================================================*/
+
+img{
+
+    transition:.4s;
+
+}
+
+img:hover{
+
+    transform:scale(1.02);
+
+}
+
+/*====================================================
+                GLASS CARD
+=====================================================*/
+
+.glass{
+
+    background:rgba(255,255,255,.7);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.4);
+
+    border-radius:20px;
+
+}
+
+/*====================================================
+            TEXT SELECTION
+=====================================================*/
+
+::selection{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+}
+
+/*====================================================
+                RESPONSIVE
+=====================================================*/
+
+@media(max-width:992px){
+
+#projects .card{
+
+margin-bottom:30px;
+
+}
+
+.counter-section h1{
+
+font-size:42px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+#contact form{
+
+padding:25px;
+
+}
+
+#contact{
+
+text-align:center;
+
+}
+
+}
+
+@media(max-width:576px){
+
+#projects .card img{
+
+height:200px;
+
+}
+
+.counter-section h1{
+
+font-size:34px;
+
+}
+
+footer{
+
+text-align:center;
+
+}
+
+}
+/*====================================================
+                PART 3D
+          ANIMATIONS & RESPONSIVE
+=====================================================*/
+
+/* Fade In */
+
+.fade-in{
+    animation:fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn{
+
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* Floating Animation */
+
+.float{
+    animation:floating 4s ease-in-out infinite;
+}
+
+@keyframes floating{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* Zoom Animation */
+
+.zoom{
+    transition:.4s;
+}
+
+.zoom:hover{
+    transform:scale(1.05);
+}
+
+/* Rotate Animation */
+
+.rotate{
+    transition:.5s;
+}
+
+.rotate:hover{
+    transform:rotate(5deg);
+}
+
+/* Card Hover */
+
+.card{
+    transition:.4s;
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.15);
+
+}
+
+/* Button */
+
+.btn{
+
+    transition:.35s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* Navbar */
+
+.navbar{
+
+    transition:.4s;
+
+}
+
+.navbar.scrolled{
+
+    padding:10px 0;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+
+}
+
+/* Hero */
+
+#home{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Background Circle */
+
+#home::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+    height:550px;
+
+    background:#0d6efd10;
+
+    border-radius:50%;
+
+    top:-150px;
+    right:-150px;
+
+    z-index:0;
+
+}
+
+#home .container{
+
+    position:relative;
+    z-index:2;
+
+}
+
+/* Image */
+
+#home img{
+
+    border:8px solid #fff;
+
+    transition:.5s;
+
+}
+
+#home img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* Social */
+
+#home .fa-brands{
+
+    transition:.3s;
+
+}
+
+#home .fa-brands:hover{
+
+    color:#0d6efd;
+
+    transform:translateY(-6px);
+
+}
+
+/* Scroll Top Button */
+
+#topBtn{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    display:none;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+#topBtn:hover{
+
+    background:#084298;
+
+}
+
+/* Loader */
+
+.loader{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    background:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.loader::after{
+
+    content:"";
+
+    width:60px;
+
+    height:60px;
+
+    border:6px solid #ddd;
+
+    border-top:6px solid #0d6efd;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/* Footer */
+
+footer{
+
+    background:#111;
+
+}
+
+footer p{
+
+    color:#ccc;
+
+}
+
+footer a{
+
+    transition:.3s;
+
+}
+
+footer a:hover{
+
+    color:#0d6efd;
+
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+
+#home h1{
+
+font-size:55px;
+
+}
+
+}
+
+@media(max-width:992px){
+
+#home{
+
+text-align:center;
+
+}
+
+#home img{
+
+margin-top:40px;
+
+width:320px;
+height:320px;
+
+}
+
+section{
+
+padding:80px 0;
+
+}
+
+}
+
+@media(max-width:768px){
+
+#home h1{
+
+font-size:42px;
+
+}
+
+#home h3{
+
+font-size:24px;
+
+}
+
+section h2{
+
+font-size:32px;
+
+}
+
+.navbar-brand{
+
+font-size:26px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+#home{
+
+padding-top:120px;
+
+}
+
+#home h1{
+
+font-size:34px;
+
+}
+
+#home img{
+
+width:250px;
+height:250px;
+
+}
+
+.btn{
+
+width:100%;
+margin-bottom:15px;
+
+}
+
+section{
+
+padding:60px 0;
+
+}
+
+}
